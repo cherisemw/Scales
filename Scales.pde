@@ -4,15 +4,17 @@ void setup() {
 }
 
 void draw() {
-  for(int i = 480; i > 0; i -= 40){
-      for(int j = 75; j < 500; j += 75){
+  int g = 250;
+  for(int i = 500; i > 0; i -= 40){
+    g -= 15;
+    fill(0, g, 0);
+      for(int j = 0; j < 550; j += 75){
         scale(j,i);
-      }
+    }
   }
 }
 
 void scale(int x, int y) {
-  fill(0, 150, 0);
   beginShape();
   vertex(x-50,y-50);
   vertex(x-100,y-35);
